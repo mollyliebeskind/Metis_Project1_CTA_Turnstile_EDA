@@ -19,6 +19,11 @@ recordings to occur between the standard 4 hour increments. To account for hourl
 variations and daylight savings, grouping hourly data into 3 hour increments
 """
 
+def import_data():
+    mta_daily = pd.read_csv('mta_daily.csv')
+    mta_hourly = pd.read_csv('mta_hourly.csv')
+    return mta_daily, mta_hourly
+
 def top_station_dataset(data, list_of_stop_stations):
     """Reduces dataset to only the top stations to decrease computation and time needed for executions."""
     x1, x2, x3, x4, x5, x6, x7, x8, x9 = list_of_stop_stations
@@ -79,6 +84,7 @@ def entries_per_hour_block(data, top_stations_list):
 
     return grp_hourly_dow
 
+mta_daily, mta_hourly = import_data()
 grp_hourly_dow = entries_per_hour_block(all_days_top_sta)
 
 #plot hourly traffic for the busiest days of the week to determine posting times
