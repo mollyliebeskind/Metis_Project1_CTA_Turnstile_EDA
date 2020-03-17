@@ -5,8 +5,8 @@ Performed exploratory data analysis to identify high-traffic times and locations
 
 ## Data Sources
 
-* http://web.mta.info/developers/data/nyct/turnstile/
-* http://web.mta.info/developers/data/nyct/subway/Stations.csv
+* MTA Turnstyle Data: http://web.mta.info/developers/data/nyct/turnstile/
+* MTA Subway Borough Locations: http://web.mta.info/developers/data/nyct/subway/Stations.csv
 * NYC Census Jan-09-2020
 
 ## Featured Techniques
