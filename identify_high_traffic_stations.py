@@ -20,6 +20,13 @@ Subway stations will be selected based on EDA below
 and on the borough priorities above.
 """
 
+def import_data():
+    mta_daily = pd.read_csv('mta_daily.csv')
+    mta_hourly = pd.read_csv('mta_hourly.csv')
+    return mta_daily, mta_hourly
+
+mta_daily, mta_hourly = import_data()
+
 def peak_stations(data, borough):
     """Takes in a dataset and borough and identifies top subway stations in that borough."""
     # identify total entries per station per week
